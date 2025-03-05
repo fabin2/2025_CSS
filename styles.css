@@ -1,7 +1,19 @@
-body{
-    background-color: rgb(118, 210, 159);
+h1{
+    border-left-style: solid;
+    border-top-style: dotted;
+    border-bottom-style: groove;
+    border-right-style: inset;
+    border-top-width: 10px;
+    border-color: red;
+}
+h2{
+    border: 5px solid blue;
+    border-radius: 20px;
+}
+h3{
+    border: 5mm ridge rgba(19, 68, 227, 0.6);
+    border-radius: 20px;
 }
 p{
-    color: white;
-    background-color: rgb(9, 113, 113);
+    border-style: dotted;
 }
