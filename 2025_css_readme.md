@@ -1,39 +1,3 @@
-```html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <style>
-        h2{color: blue;}
-    </style>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-    <h1 style="color: red;">Inline CSS</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, obcaecati fugiat!</p>
-    <h1 id="head1">Id</h1>
-    <p class="para1">Lorem ipsum</p>
-
-</body>
-</html>
-```
-
-```css
-body{background-color: rgb(118, 210, 159);}
-p{color: white; background-color: rgb(9, 113, 113);}
-
-*{color: red; text-align: center;}
-
-p,h1,h3{
-    color: red;
-}
-
-```
-
-
 # CSS
 `Inline` css is written in the body and `Internal` style-element inside head tag.
 ```html
@@ -131,3 +95,41 @@ p{
 }
 ```
 
+**MARGIN** Creating space around an element, pushing it away from other elements or browser. Margin set four sides of an element (top,right,bottom,left). Use different units of measurement.
+```css
+*{
+    margin: 0px;
+}
+h1{
+    margin: 80px 40px 20px 10px; /*Top=80 Right=40 Bottom=20 Left=10*/
+    
+}
+h2{
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 80px;
+}
+
+```
+```html
+<div class="margin"><span>MARGIN</span></div>
+```
+
+**PADDING**<br>
+<img src="images/margin-padding.png" alt="margin-padding_image" width="30%" height="30%"><br>
+```css
+.padding-h2{
+    padding: 20px; /*TOP RIGHT BOTTOM LEFT*/
+    padding: 20px 50px; /*TOP=20 BOTTOM=20 RIGHT=50 LEFT=50*/
+    padding: 10px 50px 80px; /*TOP=10 RIGHT=50 BOTTOM=80 LEFT=50*/
+}
+.padding-para{
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+}
+
+```

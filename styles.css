@@ -1,4 +1,5 @@
-h1{
+.head1{
+    font-size: 5rem;
     border-left-style: solid;
     border-top-style: dotted;
     border-bottom-style: groove;
@@ -6,14 +7,38 @@ h1{
     border-top-width: 10px;
     border-color: red;
 }
-h2{
+.head2{
+    font-size: 3rem;
     border: 5px solid blue;
-    border-radius: 20px;
+    border-radius: 30px;
 }
-h3{
+.head3{
+    font-size: 3rem;
     border: 5mm ridge rgba(19, 68, 227, 0.6);
     border-radius: 20px;
 }
-p{
+.para1,.para2,.para3{
     border-style: dotted;
+}
+
+.margin{
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 80px;
+}
+
+.padding-h2, .padding-para{
+border: 5px solid red;
+}
+.padding-h2{
+    background-color: blue;
+    padding: 10px 50px 80px;
+}
+.padding-para{
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 80px;
 }
