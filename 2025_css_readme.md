@@ -119,6 +119,7 @@ h2{
 
 **PADDING**<br>
 <img src="images/margin-padding.png" alt="margin-padding_image" width="30%" height="30%"><br>
+
 ```css
 .padding-h2{
     padding: 20px; /*TOP RIGHT BOTTOM LEFT*/
@@ -135,6 +136,7 @@ h2{
 
 **HEIGHT and WIDTH**<br>
 <img src="images/pad-height-width.PNG" alt="height-width_image" width="30%" height="30%"><br>
+
 ```css
 .height-width-h3{
     border: 5px solid blueviolet;
@@ -150,7 +152,9 @@ h2{
 ```
 
 **OUTLINE**<br>
+
 <img src="images/outline.PNG" alt="outline_image" width="30%" height="30%"><br>
+
 ```css
 h4{
     border: 5px solid red;
@@ -177,6 +181,7 @@ body{
 
 TEXT<br>
 <img src="images/textshadow.PNG" alt="textshadow_image" width="30%" height="30%"><br>
+
 ```css
 p{
     text-align: center;
@@ -202,9 +207,11 @@ li{
 }
 ```
 
+TABLE<br>
 <img src="images/list-table.PNG" alt="list-table_image" width="30%" height="30%"><br>
+Table Hoover and Odd<br>
+<img src="images/table-hoover-odd.PNG" alt="table-hoover-odd_image" width="30%" height="30%"><br>
 
-TABLE
 ```css
 table, th,td{
     border: 2px solid black;
@@ -222,6 +229,101 @@ th{
 td{
     height: 25px;
     text-align: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
+tr:hover{
+    background-color: grey; /*hoover tr !No bgc defined at td*/
+}
+tr:nth-child(odd){
+    background-color: yellowgreen; /*Odd-even !No bgc defined at td*/
+}
+```
+
+OVERFLOW example div text<br>
+
+<img src="images/overflow-problem.PNG" alt="overflow-problem_image" width="30%" height="30%">
+<img src="images/overflow-prosolved.PNG" alt="overflow-prosolved_image" width="30%" height="30%"><br>
+
+```css
+.overflow{
+    background-color: yellowgreen;
+    width: 250px;
+    height: 200px;
+    
+    overflow: visible;/*default state*/
+    overflow: hidden;/*no overflow*/
+    overflow: scroll;/*scroll*/
+    overflow: auto; /*default scroll*/
+}
+```
+
+**ABSOLUTE UNITS & RELATIVE UNITS**<br>
+ABSOLUTE UNITS:
+`px` (pixels), `cm` (centimeters), `mm` (millimeters), `in` (inches), `pt` (points), `pc` (picas): Also<br>
+RELATIVE UNITS:
+`em`: Relative to the font size of the element itself.
+`rem`: Relative to the font size of the root element (`<html>`).
+`%` (percentage): Relative to the parent element's size.
+`vw` (viewport width), `vh` (viewport height): Relative to the viewport's dimensions.
+`vmin`, `vmax`: Relative to the smaller or larger dimension of the viewport, respectively.
+`ch`: Relative to the width of the "0" character.
+`ex`: Relative to the x-height of the font.
+
+```html
+<div class="div-parent-em">
+    <p>Paragraph 1</p>
+    <div class="div-chil-em"> <!--child inherit fontsize as below mentioned-->
+        <p>Paragraph 2</p>  
+    </div>
+</div>
+
+
+.div-parent-em{
+    font-size: 20px;
+}
+```
+EM
+```css
+.div-parent-em{
+    font-size: 20px;
+}
+.div-child-em{
+    font-size: 2em; /*child double from parent*/
+}
+```
+
+**`EM`**<br>
+<img src="images/em-relative-unit.PNG" alt="em-relative-unit_image" width="30%" height="30%"><br>
+
+REM
+```css
+html{
+    font-size: 20px;    /*Root value passing through REM EM*/
+}
+.div-parent-em{
+    font-size: 2rem;    /*REM = 2*root */
+}
+.div-child-em{
+    font-size: .5em;    /*.5em half from parent 2rem */
+}
+```
+**VIEWPORT**  is the user's visible area of a web page. Here empty parent child div tag. **PERCENTAGE** relative to the parent element<br>
+<img src="images/viewport-percentage.PNG" alt="viewport-percentage_image" width="30%" height="30%"><br>
+
+```css
+.div-parent-viewport{
+    width: 30vw;
+    height: 10vh;
+    background-color: blueviolet;
+}
+.div-child-viewport{
+    width: 50%;
+    height: 75%;
+    background-color: blue;
+}
+
+<div class="div-parent-viewport">
+    <div class="div-child-viewport">
+    </div>
+</div>
 ```
