@@ -171,10 +171,11 @@ body{
     background-repeat: no-repeat; /*x, y positions*/
     background-position: top right; /* positions*/
     background-attachment: fixed;/*image fixed, scroll*/
+    background-size: cover;
 }
 ```
-TEXT
 
+TEXT<br>
 <img src="images/textshadow.PNG" alt="textshadow_image" width="30%" height="30%"><br>
 ```css
 p{
@@ -186,5 +187,41 @@ p{
     line-height: 2;
     word-spacing: 5px;
     text-shadow: 2px 5px 10px black; /*horizontal vertical blur*/
+}
+```
+
+LIST
+```css
+list-style-type: square;
+list-style-type: upper-alpha; 
+ul,ol{
+    list-style-position: inside;
+}
+li{
+    border: 1px solid black;
+}
+```
+
+<img src="images/list-table.PNG" alt="list-table_image" width="30%" height="30%"><br>
+
+TABLE
+```css
+table, th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+th{
+    height: 30px;
+    vertical-align: middle;
+    background-color: blueviolet;
+    color: white;
+}
+td{
+    height: 25px;
+    text-align: center;
+    background-color: yellow;
 }
 ```

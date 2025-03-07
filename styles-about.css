@@ -1,8 +1,12 @@
 body{
+    margin: 0px;
+}
+.imagetest{
     background-image: url("/images/cat.jpg");
     background-repeat: no-repeat;
-    background-position: top right;
-    background-attachment: fixed;
+    display: block;
+    width: 100%;
+    background-size: cover;
 }
 p{
     text-indent: 30px;
@@ -10,4 +14,34 @@ p{
     line-height: 2;
     word-spacing: 5px;
     text-shadow: 2px 5px 10px black; /*horizontal vertical blur*/
+}
+/*List*/
+ul, ol{
+    list-style-position: inside;
+    background-color: blueviolet;
+}
+li{
+    border: 1px solid black;
+}
+/*Table*/
+table, th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+th{
+    height: 30px;
+    vertical-align: middle;
+    background-color: blueviolet;
+    color: white;
+}
+td{
+    height: 25px;
+    text-align: center;
+    background-color: yellow;
+}
+tr:hover{
+    background-color: gray;
 }
