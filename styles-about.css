@@ -1,0 +1,13 @@
+body{
+    background-image: url("/images/cat.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: fixed;
+}
+p{
+    text-indent: 30px;
+    letter-spacing: 5px;
+    line-height: 2;
+    word-spacing: 5px;
+    text-shadow: 2px 5px 10px black; /*horizontal vertical blur*/
+}

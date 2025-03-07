@@ -131,5 +131,60 @@ h2{
     padding-bottom: 40px;
     padding-left: 80px;
 }
+```
 
+**HEIGHT and WIDTH**<br>
+<img src="images/pad-height-width.PNG" alt="height-width_image" width="30%" height="30%"><br>
+```css
+.height-width-h3{
+    border: 5px solid blueviolet;
+    width: 250px;
+    height: 50px;
+}
+
+.height-width-div{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+```
+
+**OUTLINE**<br>
+<img src="images/outline.PNG" alt="outline_image" width="30%" height="30%"><br>
+```css
+h4{
+    border: 5px solid red;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: blue;
+    outline-offset: 5px;
+}
+h5{
+    outline: 5px dotted red /*outline shorthand*/
+    outline-offset: 5px
+}
+```
+Background Image can put in any element
+```css
+body{
+    background-image: url("/images/cat.jpg");
+    background-repeat: no-repeat; /*x, y positions*/
+    background-position: top right; /* positions*/
+    background-attachment: fixed;/*image fixed, scroll*/
+}
+```
+TEXT
+
+<img src="images/textshadow.PNG" alt="textshadow_image" width="30%" height="30%"><br>
+```css
+p{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-indent: 30px;
+    letter-spacing: 5px;
+    line-height: 2;
+    word-spacing: 5px;
+    text-shadow: 2px 5px 10px black; /*horizontal vertical blur*/
+}
 ```
