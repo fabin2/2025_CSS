@@ -1,0 +1,23 @@
+/* EM REM */
+html{
+    font-size: 30px;
+}
+.div-parent-em{
+    font-size: 2rem;
+}
+.div-child-em{
+    font-size: .5em;
+}
+
+/* Viewport */
+.div-parent-viewport{
+    width: 30vw;
+    height: 10vh;
+    background-color: blueviolet;
+}
+.div-child-viewport{
+    width: 50%;
+    height: 75%;
+    background-color: blue;
+}
+

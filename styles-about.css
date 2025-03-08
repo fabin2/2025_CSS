@@ -40,8 +40,20 @@ th{
 td{
     height: 25px;
     text-align: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 tr:hover{
-    background-color: gray;
+    background-color: grey; /*hoover tr !No bgc defined at td*/
+}
+tr:nth-child(odd){
+    background-color: yellowgreen; /*Odd-even !No bgc defined at td*/
+}
+
+/* Overflow */
+.overflow{
+    background-color: yellowgreen;
+    width: 250px;
+    height: 200px;
+    
+    overflow: auto;
 }
