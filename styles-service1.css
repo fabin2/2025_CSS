@@ -1,6 +1,6 @@
 /* EM REM */
 html{
-    font-size: 30px;
+    font-size: 20px;
 }
 .div-parent-em{
     font-size: 2rem;
@@ -21,3 +21,49 @@ html{
     background-color: blue;
 }
 
+/* Link */
+a{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+}
+a:hover{
+    color: black;
+    background-color: red;
+}
+
+/* Positions */
+.parent-position{
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    margin: auto;
+}
+.child-position1{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    margin: 2px;
+    position: relative;
+    left: 40px;
+    top: 25px;
+}
+.child-position2{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    margin: 2px;
+}
+.child-position3{
+    width: 40px;
+    height: 40px;
+    background-color: yellowgreen;
+    margin: 2px;
+}
+.child-position4{
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet;
+    margin: 2px;
+}

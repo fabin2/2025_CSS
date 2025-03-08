@@ -327,3 +327,72 @@ html{
     </div>
 </div>
 ```
+**LINK**
+```css
+<a href="#" class="link1">Google</a>
+<a href="#" class="link2">Facebook</a>
+<a href="#" class="link3">Instagram</a>
+
+a{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+}
+a:hover{
+    color: black;
+    background-color: red;
+}
+```
+
+**POSITIONS**<br>
+1.Static - Default, cant change TOP, BOTTOM, LEFT, RIGHT properties.<br>
+2.Rlative - it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.<br>
+3.Absolute -  is positioned relative to the nearest positioned ancestor, if an absolute positioned element has no positioned ancestors, it uses the document body
+4.Fixed 
+5.Sticky
+
+```css
+<div class="parent-position">
+    <div class="child-position1"></div>
+    <div class="child-position2"></div>
+    <div class="child-position3"></div>
+    <div class="child-position4"></div>
+</div>
+
+.parent-position{
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    margin: auto;
+}
+.child-position1{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    margin: 2px;
+  /*position: static;    Static or default value*/
+  /*top: 10px;           any value wont apply Static or default  */
+    position: relative;
+    left: 40px;
+    top: 25px;
+}
+.child-position2{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    margin: 2px;
+}
+.child-position3{
+    width: 40px;
+    height: 40px;
+    background-color: yellowgreen;
+    margin: 2px;
+}
+.child-position4{
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet;
+    margin: 2px;
+}
+```
