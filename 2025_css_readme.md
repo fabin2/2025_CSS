@@ -347,17 +347,19 @@ a:hover{
 
 **POSITIONS**<br>
 1.Static - Default, cant change TOP, BOTTOM, LEFT, RIGHT properties.<br>
-2.Rlative - it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.<br>
-3.Absolute -  is positioned relative to the nearest positioned ancestor, if an absolute positioned element has no positioned ancestors, it uses the document body
-4.Fixed 
-5.Sticky
+2.Rlative - it to be adjusted away from its normal position. `Other content will not be adjusted to fit into any gap left by the element`.<br>
+3.Absolute -  is positioned relative to the nearest positioned ancestor, if an absolute positioned element has no positioned ancestors, it uses the document body. `Note: Absolute positioned elements are removed from the normal position, and occupied its position by other elements.`<br>
+4.Fixed - is positioned relative to the ***viewport***, which means `it always stays in the same place even if the page is scrolled`. The top, right, bottom, and left properties are used to position the element.<br>
+5.Sticky - it must stay within it’s containing block (it’s parent)! `Once that containing block scrolls off the page, it leaves with it`.<br>
+
+<img src="images/positions.PNG" alt="positions_image" width="30%" height="30%"><br>
 
 ```css
 <div class="parent-position">
-    <div class="child-position1"></div>
-    <div class="child-position2"></div>
-    <div class="child-position3"></div>
-    <div class="child-position4"></div>
+    <div class="child-position1">Relative</div>
+    <div class="child-position2">Absolute</div>
+    <div class="child-position3">Fixed</div>
+    <div class="child-position4">Sticky</div>
 </div>
 
 .parent-position{
@@ -365,6 +367,7 @@ a:hover{
     height: 200px;
     border: 2px solid black;
     margin: auto;
+    position: relative; /* position to followed by absolute */
 }
 .child-position1{
     width: 40px;
@@ -380,19 +383,27 @@ a:hover{
 .child-position2{
     width: 40px;
     height: 40px;
-    background-color: green;
+    background-color: green; 
     margin: 2px;
+    position: absolute; /* absolute follows parent position or if not body element*/
+    top: 0px;
+    right: 10px;
 }
 .child-position3{
     width: 40px;
     height: 40px;
     background-color: yellowgreen;
     margin: 2px;
+    position: fixed; /* fixed at viewport */
+    left: 10px;
+    top: right;
 }
 .child-position4{
     width: 40px;
     height: 40px;
     background-color: blueviolet;
     margin: 2px;
+    position: sticky; /* sticky only from top 0-pixel */
+    top: 0px;
 }
 ```
