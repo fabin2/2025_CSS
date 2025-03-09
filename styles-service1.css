@@ -1,6 +1,7 @@
 /* EM REM */
 html{
     font-size: 20px;
+    font-family: montserrat-light;
 }
 .div-parent-em{
     font-size: 2rem;
@@ -79,5 +80,21 @@ a:hover{
 
     position: sticky;
     top: 0px;
-    
+}
+
+/* Display elements*/
+img{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+li{
+    display: inline;
+    padding: 10px;
+    background-color: blueviolet;
+}
+/*Font download and using*/
+@font-face {
+    font-family: "montserrat-light";
+    src: url(/fonts/Montserrat-Light.ttf);
 }

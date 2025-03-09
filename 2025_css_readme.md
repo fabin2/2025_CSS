@@ -407,3 +407,54 @@ a:hover{
     top: 0px;
 }
 ```
+
+**DISPLAY :**
+HTML element has a default display value block or inline. `Block-level` element always starts on a new line and takes up the full width available **(div, h1, p, form, header, footer, section)**. `Inline` element DOES NOT start on a new line and only takes up as much width as necessary **(span, a, img)**.<br>
+`The display property has many values!`, ex: inline, block. `display:none`	The element is completely removed, and the page will be displayed as if the element is not there. `visibility:hidden`  The element will be hidden, will still take up the same space as before.<br>
+
+<img src="images/display-elements.PNG" alt="display-element_image" width="30%" height="30%"><br>
+
+```css
+img{
+    width: 100px;
+    height: 100px;
+    display: block; /* img element as block */
+}
+li{
+    display: inline; /* li element as inline */
+    padding: 10px;
+    background-color: blueviolet;
+}
+
+ <ul>
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>SERVICE</li>
+        <li>CONTACT</li>
+    </ul>
+    <img src="/images/bird1.png" alt="bird1_image">
+    <img src="/images/bird2.png" alt="bird2_image">
+    <img src="/images/bird3.png" alt="bird3_image">
+```
+
+**FONTS**<br>
+`Web safe fonts`: always check how your fonts appear on different browsers and devices, and always use fallback fonts; `Fallback Fonts`: If the first font does not work, the browser will try the next one, and the next one, and so on.<br>
+Google Fonts (CDN): add a special style sheet link in the `<head>` section and then refer to the font in the CSS. Multiple Google fonts, just separate the font names with a pipe character `(|)`.
+
+```css
+h1{
+    font-family: Arial, Helvetica, sans-serif; /*web safe fonts & fallback*/
+}
+@font-face {
+    font-family: "montserrat-light";
+    src: url(/fonts/Montserrat-Light.ttf); /*downladed font file*/
+}
+html{
+    font-family: "montserrat-light";
+}
+
+<link rel="" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"> /*multiple fonts through content delivery network*/ 
+
+
+
+```
