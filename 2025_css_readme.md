@@ -452,9 +452,96 @@ h1{
 html{
     font-family: "montserrat-light";
 }
-
-<link rel="" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"> /*multiple fonts through content delivery network*/ 
-
-
-
+/*multiple fonts through content delivery network*/
+<link rel="" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"> 
 ```
+
+RADIUS<br>
+first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner.<br>
+
+<img src="images/radius.PNG" alt="radius_image" width="30%" height="30%"><br>
+
+```css
+.radius1{
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+
+    border-radius: 50px; /*radius circle*/
+
+    border-radius: 0px 40px 0px 40px; /*shorthand top-right, top-left, bottom-right, bottom-left*/
+
+    border-top-right-radius: 40px; /*individual corner*/
+    border-bottom-left-radius: 40px;
+}
+```
+PSEUDO-CLASS<br>
+A Pseudo-class selects elements that are in a specific state/condition.<br>
+**`:hover`** = Applies styles when the user hovers over an element.
+**`:active`** = Applies styles when an element is being activated (e.g., clicked).
+**`:focus`** = Applies styles when an element has focus (e.g., an input field being typed in).
+**`:link`** = Applies styles to unvisited links.
+**`:visited`** = Applies styles to visited links.
+
+<img src="images/pseudo-class.PNG" alt="pseudo-class_image" width="30%" height="30%"><br>
+
+```css
+.div-hover1:hover{ /*Hover*/
+    color: red;
+    font-size: 40px;
+}
+
+.div-active1:active{ /*Active */
+    color: blue;
+    background-color: red;
+    font-style: italic;
+}
+input:focus{ /*Focus input-text*/
+    background-color: blueviolet;
+    border: 5px solid yellow ;
+}
+/*Link not visited*/
+a:link{
+    color: red;
+}
+/*Visited the user has visited*/
+a:visited{
+    color: green;
+}
+```
+
+PSEUDO-ELEMENT<br>
+Pseudo-elemnt style a specific part of the selected elements.<br>
+**`::first-line`**
+**`::first-letter`**
+**`::before`**
+**`::after`**
+**`::selection`**
+
+<img src="images/pseudo-element.PNG" alt="pseudo-element_image" width="30%" height="30%"><br>
+
+```css
+.pseudoelement-para::first-line{ /*::first-line*/
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+.pseudoelement-para::first-letter{ /*::first-letter*/
+    color: blue;
+    font-size: 30px;
+}
+.pseudoelement-h3::before{ /*::before*/
+    content: "Before ";
+    color: blueviolet;
+}
+.pseudoelement-h3:hover::after{ /*::after*/
+    content: " hover After";
+    content: url(/images/bird1.png); /*can add icon and pics*/
+}
+.pseudoelement-para::selection{ /*::selection*/
+    color: yellow;
+    background-color: red;
+}
+```
+
+

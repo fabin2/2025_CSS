@@ -1,0 +1,57 @@
+/* Radius*/
+.radius1{
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px 20px 40px;
+}
+/*Hover*/
+.div-hover1:hover{
+    color: red;
+    font-size: 40px;
+}
+/*Active*/
+.div-active1:active{
+    color: blue;
+    background-color: red;
+    font-style: italic;
+}
+/*Focus*/
+input:focus{
+    background-color: blueviolet;
+    border: 5px solid yellow ;
+}
+
+/*Link notvisited*/
+a{text-decoration: none;}
+a:link{
+    color: red;
+}
+/*Visited*/
+a:visited{
+    color: green;
+}
+
+/*Pseudo-Element*/
+.pseudoelement-para::first-line{
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+.pseudoelement-para::first-letter{
+    color: blue;
+    font-size: 30px;
+}
+.pseudoelement-h3::before{
+    content: "Before ";
+    color: blueviolet;
+}
+.pseudoelement-h3::after{
+    content: " hover After"; /*can add icon and pics*/
+    color: blueviolet;
+}
+.pseudoelement-para::selection{
+    color: yellow;
+    background-color: red;
+}
+
