@@ -55,3 +55,45 @@ a:visited{
     background-color: red;
 }
 
+/*GRADIENT*/
+.gradient-parent{
+    display: flex;
+    gap: 10px;
+}
+.gradient-child1,
+.gradient-child2,
+.gradient-child3,
+.gradient-child4,
+.gradient-child5 {
+    height: 150px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.gradient-child1{
+    background-image: linear-gradient( yellow, red, blue); /*default top to bottom*/
+}
+.gradient-child2{
+    background-image: linear-gradient(to right , yellow, red, blue);
+}
+.gradient-child3{
+    background-image: linear-gradient(to top right , yellow, red, blue); /*diagonal*/
+}
+.gradient-child4{
+    background-image: radial-gradient( yellow, red, blue); /*Radial*/
+}
+.gradient-child5{       /*sharp edge*/
+    color: black;
+    text-shadow: 2px 2px 2px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+        to right,
+        blue 0px 30%,
+        white 30% 63%,
+        red 63% 100%
+    );
+}
+
+/*TRANSFORM*/

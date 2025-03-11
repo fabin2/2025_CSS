@@ -118,7 +118,7 @@ h2{
 ```
 
 **PADDING**<br>
-<img src="images/margin-padding.png" alt="margin-padding_image" width="30%" height="30%"><br>
+<img src="images/margin-padding.png" alt="margin-padding_image" width="50%" height="30%"><br>
 
 ```css
 .padding-h2{
@@ -135,7 +135,7 @@ h2{
 ```
 
 **HEIGHT and WIDTH**<br>
-<img src="images/pad-height-width.PNG" alt="height-width_image" width="30%" height="30%"><br>
+<img src="images/pad-height-width.PNG" alt="height-width_image" width="50%" height="30%"><br>
 
 ```css
 .height-width-h3{
@@ -153,7 +153,7 @@ h2{
 
 **OUTLINE**<br>
 
-<img src="images/outline.PNG" alt="outline_image" width="30%" height="30%"><br>
+<img src="images/outline.PNG" alt="outline_image" width="50%" height="30%"><br>
 
 ```css
 h4{
@@ -208,9 +208,9 @@ li{
 ```
 
 TABLE<br>
-<img src="images/list-table.PNG" alt="list-table_image" width="30%" height="30%"><br>
+<img src="images/list-table.PNG" alt="list-table_image" width="50%" height="30%"><br>
 Table Hoover and Odd<br>
-<img src="images/table-hoover-odd.PNG" alt="table-hoover-odd_image" width="30%" height="30%"><br>
+<img src="images/table-hoover-odd.PNG" alt="table-hoover-odd_image" width="50%" height="30%"><br>
 
 ```css
 table, th,td{
@@ -352,7 +352,7 @@ a:hover{
 4.Fixed - is positioned relative to the ***viewport***, which means `it always stays in the same place even if the page is scrolled`. The top, right, bottom, and left properties are used to position the element.<br>
 5.Sticky - it must stay within it’s containing block (it’s parent)! `Once that containing block scrolls off the page, it leaves with it`.<br>
 
-<img src="images/positions.PNG" alt="positions_image" width="30%" height="30%"><br>
+<img src="images/positions.PNG" alt="positions_image" width="50%" height="30%"><br>
 
 ```css
 <div class="parent-position">
@@ -459,7 +459,7 @@ html{
 RADIUS<br>
 first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner.<br>
 
-<img src="images/radius.PNG" alt="radius_image" width="30%" height="30%"><br>
+<img src="images/radius.PNG" alt="radius_image" width="50%" height="30%"><br>
 
 ```css
 .radius1{
@@ -483,7 +483,7 @@ A Pseudo-class selects elements that are in a specific state/condition.<br>
 **`:link`** = Applies styles to unvisited links.
 **`:visited`** = Applies styles to visited links.
 
-<img src="images/pseudo-class.PNG" alt="pseudo-class_image" width="30%" height="30%"><br>
+<img src="images/pseudo-class.PNG" alt="pseudo-class_image" width="50%" height="30%"><br>
 
 ```css
 .div-hover1:hover{ /*Hover*/
@@ -544,4 +544,55 @@ Pseudo-elemnt style a specific part of the selected elements.<br>
 }
 ```
 
+**GRADIENT** Combination of colors
+linear-gradient: side
+radial-gradient: center
+
+<img src="images/gradient-linear-radial.PNG" alt="pseudo-element_image" width="70%" height="30%"><br>
+
+```css
+.gradient-child1{
+    background-image: linear-gradient( yellow, red, blue); /*default top to bottom*/
+}
+.gradient-child2{
+    background-image: linear-gradient(to right , yellow, red, blue);
+}
+.gradient-child3{
+    background-image: linear-gradient(to top right , yellow, red, blue);/*diagonal*/
+}
+.gradient-child4{
+    background-image: radial-gradient( yellow, red, blue); /*Radial*/
+}
+.gradient-child5{       /*sharp edge*/
+    color: black;
+    text-shadow: 2px 2px 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+        to right,
+        blue 0px 30%,
+        white 30% 63%,
+        red 63% 100%
+    );
+}
+
+
+.gradient-parent{
+    display: flex;
+    gap: 10px;
+}
+.gradient-child1,
+.gradient-child2,
+.gradient-child3,
+.gradient-child4,
+.gradient-child5 {
+    height: 150px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+```
+
+**TRANSFORM**
 
