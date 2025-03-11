@@ -594,5 +594,23 @@ radial-gradient: center
 }
 ```
 
-**TRANSFORM**
+**TRANSFORM** 2D
+
+<img src="images/transform2d.PNG" alt="transform2d_image" width="70%" height="30%"><br>
+
+```css
+.transform-child1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+
+    transform: translate(20px, 50px); /* x,y axis push away */
+
+    transform: rotate(45deg); /* clockwise (positive) & anticlockwise (negative)*/
+
+    transform: scale(1.5, 0.5); /* size multiply width scacleX(),height scaleY()*/
+
+    transform: skew(10deg, 20deg); /* x, y axis */
+}
+```
 

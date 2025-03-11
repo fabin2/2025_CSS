@@ -71,6 +71,7 @@ a:visited{
     justify-content: center;
     align-items: center;
     color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .gradient-child1{
     background-image: linear-gradient( yellow, red, blue); /*default top to bottom*/
@@ -87,7 +88,6 @@ a:visited{
 .gradient-child5{       /*sharp edge*/
     color: black;
     text-shadow: 2px 2px 2px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(
         to right,
         blue 0px 30%,
@@ -97,3 +97,31 @@ a:visited{
 }
 
 /*TRANSFORM*/
+.transform-parent{
+    display: flex;
+    gap: 40px;
+}
+.transform-child1,
+.transform-child2,
+.transform-child3,
+.transform-child4 {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transform-child1{
+    transform: translate(20px, 50px);
+}
+.transform-child2{
+    transform: rotate(45deg);
+}
+.transform-child3{
+    transform: scale(1.5, 0.5);
+}
+.transform-child4{
+    transform: skew(10deg, 20deg);
+}
