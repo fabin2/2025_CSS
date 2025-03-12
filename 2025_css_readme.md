@@ -118,7 +118,7 @@ h2{
 ```
 
 **PADDING**<br>
-<img src="images/margin-padding.png" alt="margin-padding_image" width="50%" height="30%"><br>
+<img src="images/margin-padding.png" alt="margin-padding_image" width="30%" height="30%"><br>
 
 ```css
 .padding-h2{
@@ -594,8 +594,12 @@ radial-gradient: center
 }
 ```
 
-**TRANSFORM** 2D
-
+**TRANSFORM** 2D<br>
+CSS transforms allow you to move, rotate, scale, and skew elements.<br>
+`transform: translate(20px, 50px)` The translate() method moves an element from its current position.<br>
+`rotate()` positive values clockwise negative values will rotate the element counter-clockwise.<br>
+`scale()` increases or decreases the size of an element for the width and height.<br>
+`skew()` skews an element along the X-axis and Y-axis by the given angle.<br>
 <img src="images/transform2d.PNG" alt="transform2d_image" width="70%" height="30%"><br>
 
 ```css
@@ -608,9 +612,134 @@ radial-gradient: center
 
     transform: rotate(45deg); /* clockwise (positive) & anticlockwise (negative)*/
 
-    transform: scale(1.5, 0.5); /* size multiply width scacleX(),height scaleY()*/
+    transform: scale(1.5, 0.5); /* size multiply/decrease width scacleX(), height scaleY()*/
 
-    transform: skew(10deg, 20deg); /* x, y axis */
+    transform: skew(10deg, 20deg); /* x, y axis or skewX() skewY()*/
+}
+
+.transform-parent{
+    display: flex;
+    gap: 80px;
+}
+.transform-child1,
+.transform-child2,
+.transform-child3,
+.transform-child4 {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ```
 
+**TRANSITION** <br>
+Transitions allows to change property values smoothly, over a given duration.<br>
+
+hover: transform, size <br>
+
+transition: time sizetime <br>
+transition-timing-function: ease default(slowstart-speed-endslow), linear(startend constant speed), ease-in(slowstart endspeed), ease-out(speedstart slowend) <br>
+transition-delay: 1s <br>
+<img src="images/transitions.PNG" alt="transitions_image" width="70%" height="30%"><br>
+
+```css
+/*TRANSITION 1*/
+.transition-image-bird1{
+    width: 100px;
+    height: 100px; 
+
+    transition: transform 2s, width 3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+}
+.transition-image-bird1:hover{
+    transform: rotate(360deg);
+    width: 200px;
+    height: auto;
+}
+/*TRANSITION 2*/
+.transition-image-bird2{
+    width: 100px;
+    height: 100px;
+
+    transition: width 2s;
+}
+.transition-image-bird2:hover{
+    width: 300px;
+}
+```
+
+**ANIMATION** <br>
+`animation-timing-function` **ease** slow start then speed slow end, **linear** - start to end same speed, **ease-in** slow start, **ease-out** slow end <br>
+
+<img src="images/animation.PNG" alt="animation_image" width="30%" height="20%"><br>
+<video src="video/transitionAnimation-video.mp4" width="540" height="360" controls></video><br>
+
+
+```css
+.animation-child1,
+.animation-child2,
+.animation-child3{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    position: relative; /*relative*/
+}
+.animation-child1{
+    background-color: blueviolet;
+    animation-name: fromLeftMovingAnimation; /*1 keyframe name*/
+    animation-duration: 2s; /*1 define duration*/
+    animation-delay: 0s; /*waiting*/
+    animation-iteration-count: 2;
+    animation-direction:reverse;
+    animation-timing-function: ease-in;
+}
+.animation-child2{
+    background-color: green;
+    animation: fromLeftMovingAnimation 2s; /*shorthand animname duration*/
+}
+@keyframes fromLeftMovingAnimation{
+    0%{ /*starting point*/
+        left: 0px;
+        border-radius: 0px;
+    }
+    100%{ /*end point*/
+        left: 400px;
+        border-radius: 50px;
+    }
+}
+
+/*keyframe square path more than 2values*/
+.animation-child3{
+    background-color: red;
+    animation: squareMovingAnimaton 4s infinite;
+}
+@keyframes squareMovingAnimaton{
+    0% { left: 0px; top: 0px; }
+    25% { left: 250px;top: 0px; }
+    50% { left: 250px;top: 250px; }
+    75% { left: 0px;top: 250px; }
+    100% { left: 0px;  top: 0px; }
+}
+```
+
+**VARIABLE**
+`var() function`, CSS variables can have a global or local scope, CSS variables have access to the DOM, change the variables with JavaScript, and change the variables based on media queries. Varible in body element is globel scope. Both of them are global<br>
+The `<html>` element (represented by `:root`) is the highest-level element in the document.
+The `<body>` element is a child of the <html> element. <br>
+
+```css
+:root{
+    --textcolor1: rgb(174, 87, 87); /*globel scope*/
+}
+h1,h2{
+    color: var(--textcolor1);
+    --textcolor2: blue; /*block scope*/
+}
+h3{
+    color: var(--textcolor2);
+}
+```

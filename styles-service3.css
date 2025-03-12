@@ -1,0 +1,82 @@
+/*TRANSITION 1*/
+.transition-image-bird1{
+    width: 100px;
+    height: 100px; 
+
+    transition: transform 2s, width 3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+}
+.transition-image-bird1:hover{
+    transform: rotate(360deg);
+    width: 200px;
+    height: auto;
+}
+/*TRANSITION 2*/
+.transition-image-bird2{
+    width: 100px;
+    height: 100px;
+
+    transition: width 2s;
+}
+.transition-image-bird2:hover{
+    width: 300px;
+}
+
+/*ANIMATION*/
+.animation-child1,
+.animation-child2,
+.animation-child3{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    position: relative; /*relative*/
+}
+.animation-child1{
+    background-color: blueviolet;
+    animation-name: fromLeftMovingAnimation; /*1 keyframe name*/
+    animation-duration: 2s; /*1 define duration*/
+    animation-delay: 0s; /*waiting*/
+    animation-iteration-count: 2;
+    animation-direction:reverse;
+    animation-timing-function: ease-in;
+}
+.animation-child2{
+    background-color: green;
+    animation: fromLeftMovingAnimation 2s; /*shorthand animname duration*/
+}
+@keyframes fromLeftMovingAnimation{
+    0%{ /*starting point*/
+        left: 0px;
+        border-radius: 0px;
+    }
+    100%{ /*end point*/
+        left: 400px;
+        border-radius: 50px;
+    }
+}
+
+/*keyframe square path more than 2values*/
+.animation-child3{
+    background-color: red;
+    animation: squareMovingAnimaton 4s infinite;
+}
+@keyframes squareMovingAnimaton{
+    0% { left: 0px; top: 0px; }
+    25% { left: 250px;top: 0px; }
+    50% { left: 250px;top: 250px; }
+    75% { left: 0px;top: 250px; }
+    100% { left: 0px;  top: 0px; }
+}
+
+/*VARIABLE*/
+:root{
+    --textcolor1: rgb(174, 87, 87); /*globel scope*/
+}
+h1,h2{
+    color: var(--textcolor1);
+    --textcolor2: blue; /*block scope*/
+}
+h3{
+    color: var(--textcolor2);
+}
